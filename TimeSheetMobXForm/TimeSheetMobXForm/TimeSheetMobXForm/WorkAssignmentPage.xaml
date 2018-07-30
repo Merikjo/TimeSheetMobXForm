@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TimeSheetMobXForm.WorkAssignmentPage">
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>-->
+
+    <ScrollView>
+        <StackLayout Padding="5" Spacing="15">
+            <Label Text="Työtehtävien valinta" Font="12" BackgroundColor="Green"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Load Work Assignments" Clicked="LoadWorkAssignments"></Button>
+            <Label Text="{Binding CountDisplay}" Font="12" BackgroundColor="Blue"/>
+            <ListView x:Name="assignmentList">
+
+            </ListView>
+            <!--//Video 4./3 (8:00)-->
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Latitude: "></Label>
+                <Label x:Name="latitudeLabel" Text="0.00"></Label>
+                <Label Text="Longitude:"></Label>
+                <Label x:Name="longitudeLabel" Text="0.00"></Label>
+            </StackLayout>
+
+            <!--//Video 3./5 (2:00)-->
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Start Work" Clicked="StartWork" FontSize="Small" TextColor="Azure"></Button>
+                <Button Text="Stop Work" Clicked="StopWork" FontSize="Small"></Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
