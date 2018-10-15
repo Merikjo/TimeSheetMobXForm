@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TimeSheetMXF.EmployeePage">
+    <!--<ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome to Xamarin.Forms!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+        </StackLayout>
+    </ContentPage.Content>-->
+
+    <!--//ks.video 2./6-->
+    <ScrollView>
+        <StackLayout Padding="5">
+            <Label Text="Työaikaleimaus" FontSize="20"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Button Text="Load Employees" Clicked="LoadEmployees"></Button>
+            <ListView x:Name="employeeList"></ListView>
+
+            <Button Text="Load Customers" Clicked="LoadCustomers"></Button>
+            <ListView x:Name="customerList">
+            </ListView>
+
+            <Image x:Name="employeeImage" />
+            <Button Text="List Work Assignments" Clicked="ListWorkAssignments"></Button>
+            <!--<Button Text="Take Employee Picture" Clicked="TakeEmployeePicture"></Button>-->
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
